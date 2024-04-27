@@ -218,35 +218,34 @@ const SpecimenDetails = () => {
 	}
 	const handleAdd5 = (e) => {
 		e.preventDefault()
-		if (microbe3 === '' || comment1 === '') {
-			alert('Value missing\nSelect the dropdown menu')
+
+		let val1, val2, snum
+		if (microbe3 === 'others') {
+			val1 = newMicrobe3
+			console.log(val1)
 		} else {
-			let val1, val2, snum
-			if (microbe === 'other') {
-				val1 = newMicrobe3
-			} else {
-				val1 = microbe3
-			}
-			if (comment1 === 'other') {
-				val2 = newComment
-			} else {
-				val2 = comment1
-			}
-
-			setMicrobe2(microbes_list[0])
-			setComment1('')
-
-			let maxi = table4.length
-
-			snum = maxi + 1
-			if (table4.length === 0) {
-				snum = 1
-			}
-
-			let data = { SNO: snum, val1: val1, val2: val2 }
-			setTable4([...table4, data])
-			//console.log('added successfully')
+			val1 = microbe3
+			console.log(val1)
 		}
+		if (comment1 === 'other') {
+			val2 = newComment
+		} else {
+			val2 = comment1
+		}
+
+		setMicrobe2(microbes_list[0])
+		setComment1('')
+
+		let maxi = table4.length
+
+		snum = maxi + 1
+		if (table4.length === 0) {
+			snum = 1
+		}
+
+		let data = { SNO: snum, val1: val1, val2: val2 }
+		setTable4([...table4, data])
+		//console.log('added successfully')
 	}
 	useEffect(() => {
 		let dma = ''
