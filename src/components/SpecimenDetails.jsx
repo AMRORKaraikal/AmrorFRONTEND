@@ -227,7 +227,7 @@ const SpecimenDetails = () => {
 			val1 = microbe3
 			console.log(val1)
 		}
-		if (comment1 === 'other') {
+		if (comment1 === 'others') {
 			val2 = newComment
 		} else {
 			val2 = comment1
